@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayyorbek Coffee | Premium Coffee Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">SAYYORBEK<span> & COFFEE.</span></a>
+
+        <nav class="nav">
+            <a href="#home">Bosh sahifa</a>
+            <a href="#drinks">Menyu</a>
+            <a href="#about">Biz haqimizda</a>
+            <a href="#contact">Aloqa</a>
+        </nav>
+
+        <div class="header-actions">
+            <input type="search" id="searchInput" placeholder="Qahva qidirish...">
+
+            <button class="basket-button" id="basketToggle">
+                <span> SAVAT </span>
+                <span class="count" id="basketCount">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <span class="hero-label">PREMIUM COFFEE EXPERIENCE</span>
+
+                <h1>Har bir qultumda <span>mukammal ta'm.</span></h1>
+
+                <p>
+                    Eng sara qahva donlari, professional baristalar
+                    va siz uchun tayyorlangan unutilmas ta'm.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#drinks" class="main-button">MENYUNI KO'RISH</a>
+                    <a href="#about" class="outline-button">BIZ HAQIMIZDA</a>
+                </div>
+
+                <div class="hero-info">
+                    <div>
+                        <h3>100%</h3>
+                        <p>Tabiiy qahva</p>
+                    </div>
+                    <div>
+                        <h3>8+</h3>
+                        <p>Maxsus ichimliklar</p>
+                    </div>
+                    <div>
+                        <h3>08:00</h3>
+                        <p>Har kuni ochiqmiz</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="drinks" id="drinks">
+
+            <div class="section-top">
+                <div>
+                    <span class="small-title">OUR MENU</span>
+                    <h2>Bizning <span>qahvalarimiz</span></h2>
+                    <p>Kayfiyatingizga mos eng mazali ichimlikni tanlang.</p>
+                </div>
+
+                <div class="offer">
+                    <span class="offer-icon">✦</span>
+                    <h3>MAXSUS TAKLIF</h3>
+                    <p>Qahva bilan kruassan sovg'a!</p>
+                </div>
+            </div>
+
+            <div class="drink-list" id="drinkList"></div>
+
+            <div class="empty-search" id="emptySearch">
+                Bunday mahsulot topilmadi.
+            </div>
+
+        </section>
+
+        <section class="banner" id="about">
+            <div class="banner-content">
+                <span>COFFEE & RELAX</span>
+                <h2>Yaxshi qahva — yaxshi kayfiyat.</h2>
+                <p>Har bir kuningizni mazali qahva bilan boshlang.</p>
+                <a href="#drinks" class="main-button">HOZIROQ TANLANG</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <span>01</span>
+                <h3>Sifatli donlar</h3>
+                <p>Faqat saralangan va sifatli qahva donlaridan foydalanamiz.</p>
+            </div>
+
+            <div class="feature">
+                <span>02</span>
+                <h3>Professional barista</h3>
+                <p>Har bir ichimlik o'ziga xos mahorat bilan tayyorlanadi.</p>
+            </div>
+
+            <div class="feature">
+                <span>03</span>
+                <h3>Yoqimli muhit</h3>
+                <p>Dam olish va mazali qahvadan bahramand bo'lish uchun joy.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="contact">
+        <div class="footer-brand">
+            <h2>SAYYORBEK<span> & COFFEE.</span></h2>
+            <p>Har bir qultumda alohida zavq.</p>
+        </div>
+
+        <div>
+            <h3>Sahifalar</h3>
+            <a href="#home">Bosh sahifa</a>
+            <a href="#drinks">Menyu</a>
+            <a href="#about">Biz haqimizda</a>
+        </div>
+
+        <div>
+            <h3>Ish vaqti</h3>
+            <p>Har kuni: 08:00 - 22:00</p>
+            <p>Samarqand shahri</p>
+        </div>
+
+        <div>
+            <h3>Aloqa</h3>
+            <p>Biz bilan bog'laning</p>
+            <p>Sayyorbek Coffee</p>
+        </div>
+    </footer>
+
+    <div class="overlay" id="overlay"></div>
+
+    <aside class="basket-panel" id="basketPanel">
+
+        <div class="basket-header">
+            <div>
+                <span class="small-title">YOUR ORDER</span>
+                <h2>Savatchangiz</h2>
+            </div>
+
+            <button class="close-basket" id="closeBasket">✕</button>
+        </div>
+
+        <div class="basket-items" id="basketItems"></div>
+
+        <div class="basket-empty" id="basketEmpty">
+            <div class="empty-icon">☕</div>
+            <h3>Savatchangiz bo'sh</h3>
+            <p>Hali hech qanday qahva tanlamadingiz.</p>
+            <button id="continueShopping">Menyuga qaytish</button>
+        </div>
+
+        <div class="basket-bottom" id="basketBottom">
+            <div class="total-line">
+                <span>Mahsulotlar soni:</span>
+                <strong id="totalCount">0</strong>
+            </div>
+
+            <div class="total-line final-total">
+                <span>Jami summa:</span>
+                <strong id="totalPrice">0 so'm</strong>
+            </div>
+
+            <button class="clear-button" id="clearBasket">Savatchani tozalash</button>
+            <button class="checkout-button" id="checkoutButton">BUYURTMA BERISH →</button>
+        </div>
+
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
